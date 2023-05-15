@@ -139,6 +139,7 @@ function winRule() {
                 window.open('index.html', '_self');
             }
         });;
+        return true;
 }
 // ---------Time over Alert----------
 function timeAlert() {
@@ -152,6 +153,7 @@ function timeAlert() {
     // }
 
     // Sweet Alert Box
+    if(winRule()== false){
     swal("Oops! Time Over :( \n Do You Want To Play Again this Round?", {
         icon: "error",
         closeOnEsc: false,
@@ -172,4 +174,5 @@ function timeAlert() {
                 window.open('index.html', '_self');
             }
         });
+    }
 }
