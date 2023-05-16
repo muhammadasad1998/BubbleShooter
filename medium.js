@@ -6,6 +6,7 @@ let airBallonColor = ['orange', 'purple', 'gold'];
 let count = 0;
 let tmr = document.getElementById('tmr');
 let timer = 25;
+let winVar = 0;
 
 //         window.addEventListener("load",function(){
 //  let gameHeight =  window.innerHeight;
