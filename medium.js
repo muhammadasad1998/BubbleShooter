@@ -145,14 +145,16 @@ function winRule() {
             switch (value) {
 
                 case "Yes":
-                window.open('hard.html', '_self');
+                    window.open('hard.html', '_self');
                     break;
 
                 default:
-                window.open('index.html', '_self');
+                    window.open('index.html', '_self');
             }
-        });   
-        return true;
+        });
+    document.getElementsByClassName('cloud')[0].style.display = 'none';
+    document.getElementsByClassName('cloud')[1].style.display = 'none';
+    document.getElementsByClassName('cloud')[2].style.display = 'none';
 }
 // ---------TIme over Alert----------
 function timeAlert() {
@@ -165,27 +167,30 @@ function timeAlert() {
     //     window.open('home.html', '_self');
     // }
 
-     // Sweet Alert Box
-     if(winVar === 0){
-     swal("Oops! Time Over :( \n Do You Want To Play Again this Round?", {
-        icon: "error",
-        closeOnEsc: false,
-        closeOnClickOutside: false,
-        buttons: {
-            cancel: "No, Back to home",
-            Yes: true,
-        },
-    })
-        .then((value) => {
-            switch (value) {
+    // Sweet Alert Box
+    if (winVar === 0) {
+        swal("Oops! Time Over :( \n Do You Want To Play Again this Round?", {
+            icon: "error",
+            closeOnEsc: false,
+            closeOnClickOutside: false,
+            buttons: {
+                cancel: "No, Back to home",
+                Yes: true,
+            },
+        })
+            .then((value) => {
+                switch (value) {
 
-                case "Yes":
-                window.open('medium.html', '_self');
-                    break;
+                    case "Yes":
+                        window.open('medium.html', '_self');
+                        break;
 
-                default:
-                window.open('index.html', '_self');
-            }
-        });
+                    default:
+                        window.open('index.html', '_self');
+                }
+            });
     }
+    document.getElementsByClassName('cloud')[0].style.display = 'none';
+    document.getElementsByClassName('cloud')[1].style.display = 'none';
+    document.getElementsByClassName('cloud')[2].style.display = 'none';
 }
