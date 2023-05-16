@@ -57,6 +57,7 @@ let inter = setInterval(function () {
         if (count >= 20) {
             winRule();
             clearInterval(this);
+            winVar = 1;
         }
     });
 }, 800);
@@ -86,6 +87,8 @@ let gem = setInterval(function () {
         // -----------Game Winning Rule----------
         if (count >= 20) {
             winRule();
+            clearInterval(this);
+            winVar = 1;
         }
     });
 }, 8000);
@@ -162,7 +165,7 @@ function timeAlert() {
     // }
 
      // Sweet Alert Box
-     if(winRule() == false){
+     if(winVar === 0){
      swal("Oops! Time Over :( \n Do You Want To Play Again this Round?", {
         icon: "error",
         closeOnEsc: false,
