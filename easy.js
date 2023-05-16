@@ -124,7 +124,7 @@ function winRule() {
     // let box = confirm(
     //     'You Win This Round \n Do You Want To Play Next Round? \n Click OK to Play Next Round Or \n CANCEL To Back Home Page'
     // );
-     // if (box == true) {
+    // if (box == true) {
     //     window.open('medium.html', '_self');
     // } else {
     //     window.open('home.html', '_self');
@@ -144,13 +144,16 @@ function winRule() {
             switch (value) {
 
                 case "Yes":
-                window.open('medium.html', '_self');
+                    window.open('medium.html', '_self');
                     break;
 
                 default:
-                window.open('index.html', '_self');
+                    window.open('index.html', '_self');
             }
-        });       
+        });
+    document.getElementsByClassName('cloud')[0].style.display = 'none';
+    document.getElementsByClassName('cloud')[1].style.display = 'none';
+    document.getElementsByClassName('cloud')[2].style.display = 'none';
 }
 // ---------Time over Alert----------
 function timeAlert() {
@@ -164,26 +167,30 @@ function timeAlert() {
     // }
 
     // Sweet Alert Box
-    if(winVar === 0){
-    swal("Oops! Time Over :( \n Do You Want To Play Again this Round?", {
-        icon: "error",
-        closeOnEsc: false,
-        closeOnClickOutside: false,
-        buttons: {
-            cancel: "No, Back to home",
-            Yes: true,
-        },
-    })
-        .then((value) => {
-            switch (value) {
+    if (winVar === 0) {
+        swal("Oops! Time Over :( \n Do You Want To Play Again this Round?", {
+            icon: "error",
+            closeOnEsc: false,
+            closeOnClickOutside: false,
+            buttons: {
+                cancel: "No, Back to home",
+                Yes: true,
+            },
+        })
+            .then((value) => {
+                switch (value) {
 
-                case "Yes":
-                window.open('easy.html', '_self');
-                    break;
+                    case "Yes":
+                        window.open('easy.html', '_self');
+                        break;
 
-                default:
-                window.open('index.html', '_self');
-            }
-        });
+                    default:
+                        window.open('index.html', '_self');
+                }
+            });
+
     }
+    document.getElementsByClassName('cloud')[0].style.display = 'none';
+    document.getElementsByClassName('cloud')[1].style.display = 'none';
+    document.getElementsByClassName('cloud')[2].style.display = 'none';
 }
