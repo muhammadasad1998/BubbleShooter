@@ -6,7 +6,7 @@ let airBallonColor = ['orange', 'purple', 'gold'];
 let count = 0;
 let tmr = document.getElementById('tmr');
 let timer = 25;
-
+let winVar = 0;
 //         window.addEventListener("load",function(){
 //  let gameHeight =  window.innerHeight;
 //  let gameWidth = window.innerWidth;
@@ -57,7 +57,7 @@ let inter = setInterval(function () {
         if (count >= 15) {
             winRule();
             clearInterval(this);
-
+            winVar = 1;
         }
     });
 }, 1000);
@@ -87,7 +87,8 @@ let gem = setTimeout(function () {
         // -----------Game Winning Rule----------
         if (count >= 15) {
             winRule();
-
+            clearInterval(this);
+            winVar = 1;
         }
     });
 }, 10000);
@@ -149,8 +150,7 @@ function winRule() {
                 default:
                 window.open('index.html', '_self');
             }
-        });      
-        return true;     
+        });       
 }
 // ---------Time over Alert----------
 function timeAlert() {
@@ -164,7 +164,7 @@ function timeAlert() {
     // }
 
     // Sweet Alert Box
-    if(winRule()== false){
+    if(winVar === 0){
     swal("Oops! Time Over :( \n Do You Want To Play Again this Round?", {
         icon: "error",
         closeOnEsc: false,
