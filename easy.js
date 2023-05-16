@@ -164,10 +164,7 @@ function timeAlert() {
     // }
 
     // Sweet Alert Box
-    if(winRule()){
-        alert("not working");
-    }
-    else{
+    if(winRule()== false){
     swal("Oops! Time Over :( \n Do You Want To Play Again this Round?", {
         icon: "error",
         closeOnEsc: false,
