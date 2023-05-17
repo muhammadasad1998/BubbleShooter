@@ -229,7 +229,7 @@ i:hover {
 @media only screen and (max-width: 480px) {
     .rule {
         position: absolute;
-        bottom: 0px;
+        bottom: 100px;
         right: 0px;
         text-align: center;
         justify-self: center;
