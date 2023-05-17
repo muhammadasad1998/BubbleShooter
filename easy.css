@@ -211,6 +211,7 @@ i:hover {
     box-shadow: black 2px -5px 40px 1px;
     transition: transform 0.5s;
     border-radius: 10px;
+    font-size: smaller;
 }
 
 .rule:hover {
@@ -228,15 +229,15 @@ i:hover {
 
 @media only screen and (max-width: 480px) {
     .rule {
-        position: absolute;
-        bottom: 100px;
+        bottom: 0px;
         right: 0px;
-        text-align: center;
-        justify-self: center;
-        background-color: #00b4ff;
-        padding: 10px;
-        box-shadow: black 2px -5px 40px 1px;
-        transition: transform 0.5s;
-        border-radius: 10px;
     }  
+    .rule h4 {
+        font-size: 15px;
+    }
+    .time {
+    bottom: 0px;
+    left: 0px;
+    font-size: 20px;
+    }
 }
