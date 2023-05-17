@@ -179,6 +179,7 @@ body {
     position: absolute;
     bottom: 0px;
     left: 0px;
+    margin-bottom: 10px;
     text-align: center;
     background-color: #00b4ff;
     padding: 10px;
