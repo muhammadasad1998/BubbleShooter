@@ -8,6 +8,7 @@ body {
     max-height: 100vh;
     max-width: 100%;
     position: relative;
+    overflow: hidden; 
 }
 
 span {
@@ -24,7 +25,6 @@ i {
 
 i:hover {
     cursor: crosshair;
-
     opacity: 0.5;
 }
 
@@ -33,7 +33,7 @@ i:hover {
 }
 
 #scoreboard {
-    text-align: center;
+    text-align: right;
 }
 
 #scoreboard:before {
@@ -58,7 +58,6 @@ i:hover {
     -webkit-animation: animateCloud 35s linear infinite;
     -moz-animation: animateCloud 35s linear infinite;
     animation: animateCloud 35s linear infinite;
-
     -webkit-transform: scale(0.65);
     -moz-transform: scale(0.65);
     transform: scale(0.65);
@@ -77,16 +76,13 @@ i:hover {
     background: -o-linear-gradient(top, #fff 5%, #f1f1f1 100%);
     background: -ms-linear-gradient(top, #fff 5%, #f1f1f1 100%);
     background: linear-gradient(top, #fff 5%, #f1f1f1 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#f1f1f1', GradientType=0);
-
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#f1f1f1', GradientType=0);
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
-
     -webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
-
     height: 120px;
     position: relative;
     width: 350px;
@@ -104,7 +100,6 @@ i:hover {
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
-
     height: 100px;
     left: 50px;
     top: -50px;
@@ -115,7 +110,6 @@ i:hover {
     -webkit-border-radius: 200px;
     -moz-border-radius: 200px;
     border-radius: 200px;
-
     width: 180px;
     height: 180px;
     right: 50px;
@@ -126,7 +120,6 @@ i:hover {
     -webkit-animation: animateCloud 20s linear infinite;
     -moz-animation: animateCloud 20s linear infinite;
     animation: animateCloud 20s linear infinite;
-
     -webkit-transform: scale(0.3);
     -moz-transform: scale(0.3);
     transform: scale(0.3);
@@ -146,17 +139,16 @@ i:hover {
     -webkit-animation: animateCloud 30s linear infinite;
     -moz-animation: animateCloud 30s linear infinite;
     animation: animateCloud 30s linear infinite;
-
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
     transform: scale(0.5);
 }
 
 .BlittleUP {
-    animation: moveclouds 13s linear forwards;
-    -webkit-animation: moveclouds 13s linear forwards;
-    -moz-animation: moveclouds 13s linear forwards;
-    -o-animation: moveclouds 13s linear forwards;
+    animation: moveclouds 16s linear forwards;
+    -webkit-animation: moveclouds 16s linear forwards;
+    -moz-animation: moveclouds 16s linear forwards;
+    -o-animation: moveclouds 16s linear forwards;
 }
 
 .fa-gem {
@@ -177,10 +169,6 @@ i:hover {
     display: none;
 }
 
-/* scroll bar hidden */
-body {
-    overflow: hidden;
-}
 
 .time {
     font-family: 'Satisfy', cursive;
@@ -205,6 +193,7 @@ body {
 .container {
     width: 100%;
     height: 100vh;
+    /* position: relative; */
 }
 
 .timer {
@@ -222,6 +211,7 @@ body {
     box-shadow: black 2px -5px 40px 1px;
     transition: transform 0.5s;
     border-radius: 10px;
+    font-size: smaller;
 }
 
 .rule:hover {
@@ -235,4 +225,18 @@ body {
     left: 0px;
     color: black;
     padding: 5px;
+}
+
+@media only screen and (max-width: 480px) {
+    .rule {
+        bottom: 50px;
+        right: 0px;
+    }  
+    .rule h4 {
+        font-size: 15px;
+    }
+    .time {
+    bottom: 50px;
+    left: 0px;
+    }
 }
