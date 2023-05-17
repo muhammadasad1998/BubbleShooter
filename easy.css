@@ -177,9 +177,8 @@ body {
 .time {
     font-family: 'Satisfy', cursive;
     position: absolute;
-    bottom: 0px;
+    bottom: 20px;
     left: 0px;
-    margin-bottom: 10px;
     text-align: center;
     background-color: #00b4ff;
     padding: 10px;
@@ -206,7 +205,7 @@ body {
 
 .rule {
     position: absolute;
-    bottom: 0px;
+    bottom: 40px;
     right: 0px;
     text-align: center;
     justify-self: center;
